@@ -1,0 +1,66 @@
+@import "../../styles/utils/variables";
+@import "../../styles/utils/mixins";
+
+.header {
+  background: #FFFFFF;
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 13px 15px;
+
+    @include onTablet {
+      padding: 13px 32px;
+    }
+
+    @media all and (min-width: 1170px){
+      width: 1170px;
+      margin: 0 auto;
+      padding: 13px 0;
+    }
+  }
+
+  &__logo {
+    transition: transform .3s;
+    display: flex;
+    align-items: center;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 10px;
+
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 4px 22px;
+
+    height: 34px;
+    width: 100px;
+    background-color: $main-yellow;
+    border-radius: 80px;
+    color: rgba(0, 0, 0, 0.87);
+    transition: background-color .3s;
+
+    &:hover {
+      background-color: $main-yellow-hover;
+    }
+
+    &:disabled {
+      background-color: $disabled;
+      color: rgba(255, 255, 255, 0.87);
+    }
+  }
+}
