@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/abz_test/static/css/main.39e90b0d.css",
+    "main.js": "/abz_test/static/js/main.ac66b024.js",
+    "static/media/logo.svg": "/abz_test/static/media/logo.56bda82bd882001476c0cd3c0dd1e432.svg",
+    "index.html": "/abz_test/index.html",
+    "main.39e90b0d.css.map": "/abz_test/static/css/main.39e90b0d.css.map",
+    "main.ac66b024.js.map": "/abz_test/static/js/main.ac66b024.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.39e90b0d.css",
+    "static/js/main.ac66b024.js"
+  ]
+}
