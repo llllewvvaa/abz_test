@@ -1,7 +1,7 @@
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import {client} from "./fetchCli";
 import {serverResponse} from "../types/types";
-
-export const getAllUsers = (criterion?: string[][]) => {
-  return client.get<serverResponse>('/users', criterion);
+// queryParams: string
+export const getAllUsers = (url: string,criterion?: string[][]) => {
+  return client.get<serverResponse>(url, criterion);
 };

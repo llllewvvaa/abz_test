@@ -1,3 +1,6 @@
+@import "../../styles/utils/mixins";
+
+
 .users {
   &__title {
     font-size: 40px;
@@ -10,5 +13,20 @@
 
   &__list {
     margin-bottom: 50px;
+
+    @include onTablet {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      gap: 16px;
+    }
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: center;
+
+    margin-bottom: 140px;
   }
 }

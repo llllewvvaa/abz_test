@@ -1,5 +1,4 @@
 import './UserCard.scss';
-import selfie from '../../assets/images/selfie-example.jpg';
 import {User} from "../../types/types";
 import React from "react";
 
