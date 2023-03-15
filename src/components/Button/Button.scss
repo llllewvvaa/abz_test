@@ -1,0 +1,24 @@
+@import "../../styles/utils/variables";
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 4px 22px;
+
+  height: 34px;
+  background-color: $main-yellow;
+  border-radius: 80px;
+  color: rgba(0, 0, 0, 0.87);
+  transition: background-color .3s;
+
+  &:hover {
+    background-color: $main-yellow-hover;
+  }
+
+  &:disabled {
+    background-color: $disabled;
+    color: rgba(255, 255, 255, 0.87);
+  }
+}

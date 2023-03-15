@@ -1,5 +1,6 @@
 import './Header.scss';
 import logo from '../../assets/icons/logo.svg';
+import {Button} from "../Button";
 
 export const Header = () => (
   <header className="header">
@@ -12,13 +13,9 @@ export const Header = () => (
       </a>
 
       <div className="header__buttons">
-        <button className="header__button header__users">
-          Users
-        </button>
+        <Button text={'Users'} width={'100px'} />
 
-        <button className="header__button header__sign-up">
-          Sign up
-        </button>
+        <Button text={'Sign up'} width={'100px'} />
       </div>
     </div>
   </header>

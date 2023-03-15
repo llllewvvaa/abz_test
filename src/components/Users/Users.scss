@@ -1,0 +1,14 @@
+.users {
+  &__title {
+    font-size: 40px;
+    line-height: 40px;
+    color: rgba(0, 0, 0, 0.87);
+    text-align: center;
+
+    margin-bottom: 50px;
+  }
+
+  &__list {
+    margin-bottom: 50px;
+  }
+}

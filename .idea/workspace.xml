@@ -5,27 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2ec51b99-2834-44b6-bd14-c62828729a7e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Banner/Banner.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Banner/Banner.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Banner/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Header/Header.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Header/Header.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Users/Users.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Users/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/pages/HomePage/HomePage.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/pages/HomePage/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/utils/_mixins.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/utils/variables.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/api/fetchCli.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/api/users.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Button/Button.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Button/Button.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Button/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/UserCard/UserCard.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Users/Users.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/types/types.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header/Header.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header/Header.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/main.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/custom.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/custom.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Banner/Banner.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Banner/Banner.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UserCard/UserCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UserCard/UserCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Users/Users.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/Users.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles/normalize.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/normalize.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/reset.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/reset.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +72,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1678823809137</updated>
-      <workItem from="1678823810165" duration="12536000" />
+      <workItem from="1678823810165" duration="19802000" />
     </task>
     <servers />
   </component>
