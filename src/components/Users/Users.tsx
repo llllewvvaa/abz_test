@@ -1,6 +1,6 @@
 import './Users.scss';
 import {CSSProperties, useEffect, useState} from "react";
-import {getAllUsers} from "../../api/users";
+import {getAllUsers} from "../../api/api";
 import {User} from "../../types/types";
 import {UserCard} from "../UserCard";
 import {Button} from "../Button";
@@ -21,7 +21,6 @@ export const Users = () => {
   useEffect(() => {
     setIsLoading(true);
 
-
     getAllUsers(url)
       .then(response => {
         if (response.links.next_url === null) {
@@ -29,13 +28,18 @@ export const Users = () => {
 
           return;
         }
-        setUsers(prevState => [
-          ...prevState,
-          ...response.users,
-        ])
+
+        if (url !== '/users?count=6') {
+          setUsers(prevState => [
+            ...prevState,
+            ...response.users,
+          ])
+        } else {
+          setUsers(response.users);
+        }
+
 
         setIsLoading(false);
-
       })
   }, [url]);
 
@@ -48,7 +52,7 @@ export const Users = () => {
   }
 
   return (
-    <section className="users">
+    <section className="users" id="users">
       <h1 className="users__title">
         Working with GET request
       </h1>
@@ -75,7 +79,7 @@ export const Users = () => {
       {
         !isButtonHidden && (
           <div className="users__btn">
-            <button
+            <div
               className="users__btn-click"
               onClick={onShowMore}
             >
@@ -83,7 +87,7 @@ export const Users = () => {
                 text={'Show more'}
                 width={'120px'}
               />
-            </button>
+            </div>
           </div>
         )
       }

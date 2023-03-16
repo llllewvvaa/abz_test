@@ -13,9 +13,13 @@ export const Header = () => (
       </a>
 
       <div className="header__buttons">
-        <Button text={'Users'} width={'100px'} />
+        <a href="#users">
+          <Button text={'Users'} width={'100px'} />
+        </a>
 
-        <Button text={'Sign up'} width={'100px'} />
+        <a href="#form">
+          <Button text={'Sign up'} width={'100px'} />
+        </a>
       </div>
     </div>
   </header>

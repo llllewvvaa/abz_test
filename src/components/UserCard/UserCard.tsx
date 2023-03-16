@@ -17,7 +17,7 @@ export const UserCard: React.FC<Props> = ({user}) => {
 
   return (
     <div className="user-card">
-      <img src={photo} alt="photo of user" className="user-card__image"/>
+      <img src={photo} alt="user" className="user-card__image"/>
 
       <h3 className="user-card__name">
         {name}

@@ -21,3 +21,13 @@ export interface serverResponse {
   },
   "users": User[],
 }
+
+export interface serverResponsePositions {
+  "success": boolean,
+  "positions": Position[],
+}
+
+export interface Position {
+  "id": number,
+  "name": string,
+}

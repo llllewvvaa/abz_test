@@ -11,7 +11,9 @@ html {
   font-weight: 400;
 
   background-color: $main-gray;
-  color: rgba(0, 0, 0, 0.87);;
+  color: rgba(0, 0, 0, 0.87);
+
+  scroll-behavior: smooth;
 }
 
 button {
@@ -30,4 +32,9 @@ button {
   @include onDesktop {
     padding: 0 60px;
   }
+}
+
+h1 {
+  font-size: 40px;
+  line-height: 40px;
 }
