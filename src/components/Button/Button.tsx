@@ -6,7 +6,7 @@ interface Props {
   text: string;
   type: "button" | "submit";
   onSubmit?: () => void;
-  disabled: boolean;
+  disabled?: boolean;
 }
 
 export const Button: React.FC<Props> = ({
