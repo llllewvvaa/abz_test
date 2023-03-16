@@ -20,5 +20,7 @@
   &:disabled {
     background-color: $disabled;
     color: rgba(255, 255, 255, 0.87);
+
+    cursor: not-allowed;
   }
 }

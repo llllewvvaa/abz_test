@@ -1,12 +1,16 @@
 import './Users.scss';
-import {CSSProperties, useEffect, useState} from "react";
+import React, {CSSProperties, useEffect, useState} from "react";
 import {getAllUsers} from "../../api/api";
 import {User} from "../../types/types";
 import {UserCard} from "../UserCard";
 import {Button} from "../Button";
 import SyncLoader from "react-spinners/ClipLoader";
 
-export const Users = () => {
+interface Props {
+  isUpdated: boolean;
+}
+
+export const Users: React.FC<Props> = ({isUpdated}) => {
   const [users, setUsers] = useState<User[]>([]);
   const [url, setUrl] = useState('/users?count=6');
   const [isButtonHidden, setIsButtonHidden] = useState(false);
@@ -20,6 +24,7 @@ export const Users = () => {
 
   useEffect(() => {
     setIsLoading(true);
+    console.log(isUpdated)
 
     getAllUsers(url)
       .then(response => {

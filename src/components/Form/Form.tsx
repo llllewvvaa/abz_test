@@ -6,7 +6,11 @@ import {TextField} from "@mui/material";
 import {Button} from "../Button";
 import {BASE_URL} from "../../api/fetchCli";
 
-export const Form = () => {
+interface Props {
+  setIsUpdated: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+export const Form: React.FC<Props> = ({setIsUpdated}) => {
   const [positions, setPositions] = useState<Position[]>();
   const [positionId, setPositionId] = useState<number>(1);
   const [formName, setFormName] = useState<string>('');
@@ -15,7 +19,7 @@ export const Form = () => {
   const [isFormEmailError, setIsFormEmailError] = useState<boolean>(false);
   const [formPhone, setFormPhone] = useState<string>('');
   const [isFormPhoneError, setIsFormPhoneError] = useState<boolean>(false);
-  const [avatar, setAvatar] = useState<File | null>(null);
+  const [avatar, setAvatar] = useState<File>();
   const [token, setToken] = useState<string>('');
 
   useEffect(() => {
@@ -65,7 +69,7 @@ export const Form = () => {
   }
 
   const clearData = () => {
-    setAvatar(null);
+    setAvatar(undefined);
     setToken('');
     setFormName('')
     setFormEmail('')
@@ -90,6 +94,7 @@ export const Form = () => {
       }
     })
 
+    setIsUpdated(true);
     clearData();
   }
 
@@ -212,11 +217,33 @@ export const Form = () => {
 
         </div>
 
-        <input
-          type="file"
-          className="form__shape-upload"
-          onChange={handleFileChange}
-        />
+        <label
+          htmlFor="inputTag"
+          className="form__shape-upload-label"
+        >
+          <span className="form__shape-upload-label__text">
+            Upload
+          </span>
+
+          <span className="form__shape-upload-label__photo">
+            {
+              avatar?.name ? (
+                avatar.name
+              ) : (
+                <>
+                  Upload your photo
+                </>
+              )
+            }
+          </span>
+
+          <input
+            type="file"
+            id="inputTag"
+            className="form__shape-upload-input"
+            onChange={handleFileChange}
+          />
+        </label>
 
         <div className="form__shape-submit">
           <Button
