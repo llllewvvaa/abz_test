@@ -66,5 +66,14 @@
         }
       }
     }
+
+    &-upload {
+      margin-bottom: 50px;
+    }
+
+    &-submit {
+      display: flex;
+      justify-content: center;
+    }
   }
 }

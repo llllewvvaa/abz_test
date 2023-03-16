@@ -86,6 +86,7 @@ export const Users = () => {
               <Button
                 text={'Show more'}
                 width={'120px'}
+                type={"button"}
               />
             </div>
           </div>

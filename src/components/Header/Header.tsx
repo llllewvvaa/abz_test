@@ -14,11 +14,11 @@ export const Header = () => (
 
       <div className="header__buttons">
         <a href="#users">
-          <Button text={'Users'} width={'100px'} />
+          <Button text={'Users'} width={'100px'}  type={"button"}/>
         </a>
 
         <a href="#form">
-          <Button text={'Sign up'} width={'100px'} />
+          <Button text={'Sign up'} width={'100px'}  type={"button"}/>
         </a>
       </div>
     </div>

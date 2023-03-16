@@ -1,3 +1,5 @@
+import {isBooleanObject} from "util/types";
+
 export interface User {
   "id": string,
   "name": string,
@@ -30,4 +32,9 @@ export interface serverResponsePositions {
 export interface Position {
   "id": number,
   "name": string,
+}
+
+export interface serverResponseToken {
+  "success": boolean,
+  "token": string,
 }

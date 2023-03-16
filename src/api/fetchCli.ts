@@ -1,4 +1,4 @@
-const BASE_URL = 'https://frontend-test-assignment-api.abz.agency/api/v1';
+export const BASE_URL = 'https://frontend-test-assignment-api.abz.agency/api/v1';
 
 type RequestMethod = 'GET';
 
@@ -32,5 +32,7 @@ function request<T>(
 
 export const client = {
   get: <T>(url: string, searchParams: string[][] = []) =>
+    request<T>(url, undefined, searchParams),
+  post: <T>(url: string, searchParams: string[][] = []) =>
     request<T>(url, undefined, searchParams),
 };
