@@ -16,12 +16,6 @@ export const Users: React.FC<Props> = ({isUpdated}) => {
   const [isButtonHidden, setIsButtonHidden] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
-  const override: CSSProperties = {
-    display: "block",
-    margin: "0 auto",
-    borderColor: "#36d7b7",
-  };
-
   useEffect(() => {
     setIsLoading(true);
 
@@ -41,7 +35,9 @@ export const Users: React.FC<Props> = ({isUpdated}) => {
         } else {
           setUsers(response.users);
         }
-
+      })
+      .catch(e => console.error(e))
+      .finally(() => {
         setIsLoading(false);
       })
   }, [url, isUpdated]);
@@ -52,6 +48,7 @@ export const Users: React.FC<Props> = ({isUpdated}) => {
       .then(response => {
         setUrl(response.links.next_url.split('v1')[1])
       })
+      .catch(e => console.error(e))
   }
 
   return (
@@ -61,22 +58,21 @@ export const Users: React.FC<Props> = ({isUpdated}) => {
       </h1>
 
       <div className="users__list">
-        {
-          isLoading ? (
-            <SyncLoader
-              loading={isLoading}
-              cssOverride={override}
-            />
-          ) : (
-            <>
-              {
-                users.map((user: User) => (
-                  <UserCard user={user} key={user.id} />
-                ))
-              }
-            </>
-          )
-        }
+        <>
+          {
+            users.map((user: User) => (
+              <UserCard user={user} key={user.id} />
+            ))
+          }
+
+          {
+            isLoading && (
+              <SyncLoader
+                loading={isLoading}
+              />
+            )
+          }
+        </>
       </div>
 
       {

@@ -1,5 +1,3 @@
-import {isBooleanObject} from "util/types";
-
 export interface User {
   "id": string,
   "name": string,
