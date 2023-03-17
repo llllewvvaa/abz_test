@@ -42,10 +42,7 @@ export const Users: React.FC<Props> = ({isUpdated}) => {
           setUsers(response.users);
         }
 
-
         setIsLoading(false);
-        console.log('rerender')
-        
       })
   }, [url, isUpdated]);
 
