@@ -33,6 +33,8 @@
 
         margin-bottom: 7px;
 
+        cursor: pointer;
+
         &--radio {
           width: 20px;
           height: 20px;
@@ -42,6 +44,8 @@
           border-radius: 50%;
           border: 1px solid #D0CFCF;
           transition: border-color .3s;
+
+          cursor: pointer;
 
           &:checked {
             display: grid;

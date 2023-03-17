@@ -24,7 +24,6 @@ export const Users: React.FC<Props> = ({isUpdated}) => {
 
   useEffect(() => {
     setIsLoading(true);
-    console.log(isUpdated)
 
     getAllUsers(url)
       .then(response => {
@@ -45,8 +44,10 @@ export const Users: React.FC<Props> = ({isUpdated}) => {
 
 
         setIsLoading(false);
+        console.log('rerender')
+        
       })
-  }, [url]);
+  }, [url, isUpdated]);
 
 
   const onShowMore = () => {

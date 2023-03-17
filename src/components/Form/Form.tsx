@@ -77,7 +77,7 @@ export const Form: React.FC<Props> = ({setIsUpdated}) => {
     setPositionId(1);
   }
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     const formData:any = new FormData();
     formData.append('name', formName);
     formData.append('email',formEmail);
@@ -85,7 +85,7 @@ export const Form: React.FC<Props> = ({setIsUpdated}) => {
     formData.append('position_id', String(positionId));
     formData.append('photo', avatar, `${avatar?.name}`);
 
-    fetch(`${BASE_URL}/users`, {
+    await fetch(`${BASE_URL}/users`, {
       method: 'POST',
       mode: 'cors',
       body: formData,
@@ -94,7 +94,7 @@ export const Form: React.FC<Props> = ({setIsUpdated}) => {
       }
     })
 
-    setIsUpdated(true);
+    setIsUpdated(true)
     clearData();
   }
 
