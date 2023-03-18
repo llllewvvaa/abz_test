@@ -18,22 +18,22 @@ instal appropriate packages `npm i`
 use `npm start` to run it
 
 ## Stack
-<h2>
+<li>
   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" align="center" alt="html5" width="40" height="40"/>
   HTML
-</h2>
+</li>
 
-<h2>
+<li>
   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/sass/sass-original.svg" align="center" alt="sass" width="40" height="40"/>
   SCSS
-</h2>
+</li>
 
-<h2>
+<li>
   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" align="center" alt="react" width="40" height="40"/> 
   React
-</h2>
+</li>
 
-<h2>
+<li>
   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" align="center" alt="typescript" width="40" height="40"/>
   TypeScript
-</h2>
+</li>
