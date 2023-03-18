@@ -23,6 +23,14 @@
     }
   }
 
+  &__loader {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   &__btn {
     display: flex;
     justify-content: center;

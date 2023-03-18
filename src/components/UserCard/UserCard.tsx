@@ -1,13 +1,17 @@
 import './UserCard.scss';
 import {User} from "../../types/types";
 import React from "react";
+import { Tooltip } from 'react-tooltip'
+import 'react-tooltip/dist/react-tooltip.css';
 
 interface Props {
   user: User;
+  users: User[];
 }
 
-export const UserCard: React.FC<Props> = ({user}) => {
+export const UserCard: React.FC<Props> = ({user, users}) => {
   const {
+    id,
     name,
     phone,
     photo,
@@ -15,12 +19,21 @@ export const UserCard: React.FC<Props> = ({user}) => {
     email,
   } = user;
 
+  const currentUser = users.find((u) => u.id === id);
+  console.log(id, currentUser);
+
   return (
     <div className="user-card">
       <img src={photo} alt="user" className="user-card__image"/>
 
-      <h3 className="user-card__name">
+      <h3
+        className="user-card__name"
+      >
         {name}
+        <Tooltip
+          anchorSelect=".user-card__name"
+          content={currentUser?.name}
+        />
       </h3>
 
       <div className="user-card__info">

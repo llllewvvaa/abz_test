@@ -1,5 +1,5 @@
 import './Users.scss';
-import React, {CSSProperties, useEffect, useState} from "react";
+import React, {useEffect, useState} from "react";
 import {getAllUsers} from "../../api/api";
 import {User} from "../../types/types";
 import {UserCard} from "../UserCard";
@@ -61,15 +61,22 @@ export const Users: React.FC<Props> = ({isUpdated}) => {
         <>
           {
             users.map((user: User) => (
-              <UserCard user={user} key={user.id} />
+              <UserCard
+                user={user}
+                key={user.id}
+                users={users}
+              />
             ))
           }
 
           {
             isLoading && (
-              <SyncLoader
-                loading={isLoading}
-              />
+              <div className="users__loader">
+                <SyncLoader
+                  loading={isLoading}
+                  size={70}
+                />
+              </div>
             )
           }
         </>

@@ -48,6 +48,8 @@
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+
+    cursor: default;
   }
 
   &__info {
@@ -58,8 +60,16 @@
     width: 100%;
     text-align: center;
 
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+    cursor: default;
+
+
+    &-position,
+    &-email,
+    &-phone{
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      width: 100%;
+    }
   }
 }
