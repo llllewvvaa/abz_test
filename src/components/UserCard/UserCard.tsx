@@ -1,17 +1,15 @@
 import './UserCard.scss';
 import {User} from "../../types/types";
-import React from "react";
+import React, {memo} from "react";
 import { Tooltip } from 'react-tooltip'
 import 'react-tooltip/dist/react-tooltip.css';
 
 interface Props {
   user: User;
-  users: User[];
 }
 
-export const UserCard: React.FC<Props> = ({user, users}) => {
+export const UserCard: React.FC<Props> = memo(({user}) => {
   const {
-    id,
     name,
     phone,
     photo,
@@ -19,36 +17,51 @@ export const UserCard: React.FC<Props> = ({user, users}) => {
     email,
   } = user;
 
-  const currentUser = users.find((u) => u.id === id);
-  console.log(id, currentUser);
 
   return (
+    <>
     <div className="user-card">
       <img src={photo} alt="user" className="user-card__image"/>
 
       <h3
         className="user-card__name"
+        data-tooltip-id="my-tooltip"
+        data-tooltip-content={name}
       >
         {name}
-        <Tooltip
-          anchorSelect=".user-card__name"
-          content={currentUser?.name}
-        />
       </h3>
 
       <div className="user-card__info">
-        <p className="user-card__info-position">
+        <p className="user-card__info-position"
+           data-tooltip-id="my-tooltip"
+           data-tooltip-content={position}>
           {position}
         </p>
 
-        <a href={`mailto:${email}`} className="user-card__info-email">
+        <a
+          href={`mailto:${email}`}
+          className="user-card__info-email"
+          data-tooltip-id="my-tooltip"
+          data-tooltip-content={email}
+        >
           {email}
         </a>
 
-        <a href={`tel:+${phone}`} className="user-card__info-phone">
+        <a
+          href={`tel:+${phone}`}
+          className="user-card__info-phone"
+          data-tooltip-id="my-tooltip"
+          data-tooltip-content={phone}
+        >
           {phone}
         </a>
       </div>
     </div>
+
+      <Tooltip
+        id="my-tooltip"
+        clickable
+      />
+    </>
   );
-}
+});

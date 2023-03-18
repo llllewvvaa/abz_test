@@ -64,7 +64,6 @@ export const Users: React.FC<Props> = ({isUpdated}) => {
               <UserCard
                 user={user}
                 key={user.id}
-                users={users}
               />
             ))
           }
