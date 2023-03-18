@@ -17,7 +17,7 @@ export const Form: React.FC<Props> = ({setIsUpdated}) => {
   const [isFormNameError, setIsFormNameError] = useState<boolean>(false);
   const [formEmail, setFormEmail] = useState<string>('');
   const [isFormEmailError, setIsFormEmailError] = useState<boolean>(false);
-  const [formPhone, setFormPhone] = useState<string>('');
+  const [formPhone, setFormPhone] = useState<string>('+380');
   const [isFormPhoneError, setIsFormPhoneError] = useState<boolean>(false);
   const [avatar, setAvatar] = useState<File>();
   const [token, setToken] = useState<string>('');
@@ -73,7 +73,7 @@ export const Form: React.FC<Props> = ({setIsUpdated}) => {
     setToken('');
     setFormName('')
     setFormEmail('')
-    setFormPhone('')
+    setFormPhone('+380')
     setPositionId(1);
   }
 
@@ -165,6 +165,7 @@ export const Form: React.FC<Props> = ({setIsUpdated}) => {
           label="Phone"
           type="tel"
           helperText="+38 (XXX) XXX - XX - XX"
+          inputProps={{ maxLength: 13 }}
 
           error={isFormPhoneError}
           fullWidth
